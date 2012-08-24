@@ -1,0 +1,29 @@
+# Rutas importadas del bundle UsuarioBundle
+UsuarioBundle:
+    resource: "@UsuarioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Rutas importadas del bundle TiendaBundle
+TiendaBundle:
+    resource: "@TiendaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Rutas importadas del bundle CiudadBundle
+CiudadBundle:
+    resource: "@CiudadBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Rutas importadas del bundle OfertaBundle
+OfertaBundle:
+    resource: "@OfertaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# Ruta para mostrar la pagina estatica
+pagina_estatica:
+    pattern:  /sitio/{pagina}
+    defaults: { _controller: OfertaBundle:Sitio:estatica }
+
+# Ruta para mostrar la pagina estatica con la barra final
+_pagina_estatica:
+    pattern:  /sitio/{pagina}/
+    defaults: { _controller: OfertaBundle:Sitio:estatica }
